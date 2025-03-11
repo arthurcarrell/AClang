@@ -1,0 +1,5 @@
+// example program that currently cant be run
+
+fun Main() -> null {
+    Console.Log("Hello World");
+}

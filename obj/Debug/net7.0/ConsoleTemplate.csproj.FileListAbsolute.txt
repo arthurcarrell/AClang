@@ -13,3 +13,18 @@
 /workspaces/ConsoleTemplate/obj/Debug/net7.0/ConsoleTemplate.pdb
 /workspaces/ConsoleTemplate/obj/Debug/net7.0/ConsoleTemplate.genruntimeconfig.cache
 /workspaces/ConsoleTemplate/obj/Debug/net7.0/ref/ConsoleTemplate.dll
+/home/arthur/Git Repos/AClang/bin/Debug/net7.0/ConsoleTemplate
+/home/arthur/Git Repos/AClang/bin/Debug/net7.0/ConsoleTemplate.deps.json
+/home/arthur/Git Repos/AClang/bin/Debug/net7.0/ConsoleTemplate.runtimeconfig.json
+/home/arthur/Git Repos/AClang/bin/Debug/net7.0/ConsoleTemplate.dll
+/home/arthur/Git Repos/AClang/bin/Debug/net7.0/ConsoleTemplate.pdb
+/home/arthur/Git Repos/AClang/obj/Debug/net7.0/ConsoleTemplate.GeneratedMSBuildEditorConfig.editorconfig
+/home/arthur/Git Repos/AClang/obj/Debug/net7.0/ConsoleTemplate.AssemblyInfoInputs.cache
+/home/arthur/Git Repos/AClang/obj/Debug/net7.0/ConsoleTemplate.AssemblyInfo.cs
+/home/arthur/Git Repos/AClang/obj/Debug/net7.0/ConsoleTemplate.csproj.CoreCompileInputs.cache
+/home/arthur/Git Repos/AClang/obj/Debug/net7.0/ConsoleTemplate.sourcelink.json
+/home/arthur/Git Repos/AClang/obj/Debug/net7.0/ConsoleTemplate.dll
+/home/arthur/Git Repos/AClang/obj/Debug/net7.0/refint/ConsoleTemplate.dll
+/home/arthur/Git Repos/AClang/obj/Debug/net7.0/ConsoleTemplate.pdb
+/home/arthur/Git Repos/AClang/obj/Debug/net7.0/ConsoleTemplate.genruntimeconfig.cache
+/home/arthur/Git Repos/AClang/obj/Debug/net7.0/ref/ConsoleTemplate.dll

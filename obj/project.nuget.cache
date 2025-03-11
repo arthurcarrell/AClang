@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "hPnF6jfHddM=",
+  "dgSpecHash": "U3GSCZ9/ixcDzPhXUQtXONaqfgV1p1CYIMijB//xOJLJ/M7y7wizFaPHjDBHdVPRBuHioYBU+sjX1eZOXMtYDw==",
   "success": true,
-  "projectFilePath": "/workspaces/ConsoleTemplate/ConsoleTemplate.csproj",
+  "projectFilePath": "/home/arthur/Git Repos/AClang/ConsoleTemplate.csproj",
   "expectedPackageFiles": [
-    "/home/codespace/.nuget/packages/microsoft.netcore.app.ref/7.0.20/microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
-    "/home/codespace/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.20/microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
-    "/home/codespace/.nuget/packages/microsoft.netcore.app.host.linux-x64/7.0.20/microsoft.netcore.app.host.linux-x64.7.0.20.nupkg.sha512"
+    "/home/arthur/.nuget/packages/microsoft.netcore.app.ref/7.0.20/microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "/home/arthur/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.20/microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
+    "/home/arthur/.nuget/packages/microsoft.netcore.app.host.linux-x64/7.0.20/microsoft.netcore.app.host.linux-x64.7.0.20.nupkg.sha512"
   ],
   "logs": []
 }

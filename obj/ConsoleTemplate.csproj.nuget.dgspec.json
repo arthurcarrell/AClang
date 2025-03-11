@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/workspaces/ConsoleTemplate/ConsoleTemplate.csproj": {}
+    "/home/arthur/Git Repos/AClang/ConsoleTemplate.csproj": {}
   },
   "projects": {
-    "/workspaces/ConsoleTemplate/ConsoleTemplate.csproj": {
+    "/home/arthur/Git Repos/AClang/ConsoleTemplate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/workspaces/ConsoleTemplate/ConsoleTemplate.csproj",
+        "projectUniqueName": "/home/arthur/Git Repos/AClang/ConsoleTemplate.csproj",
         "projectName": "ConsoleTemplate",
-        "projectPath": "/workspaces/ConsoleTemplate/ConsoleTemplate.csproj",
-        "packagesPath": "/home/codespace/.nuget/packages/",
-        "outputPath": "/workspaces/ConsoleTemplate/obj/",
+        "projectPath": "/home/arthur/Git Repos/AClang/ConsoleTemplate.csproj",
+        "packagesPath": "/home/arthur/.nuget/packages/",
+        "outputPath": "/home/arthur/Git Repos/AClang/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/codespace/.nuget/NuGet/NuGet.Config"
+          "/home/arthur/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -32,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -72,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.111/RuntimeIdentifierGraph.json"
         }
       }
     }
