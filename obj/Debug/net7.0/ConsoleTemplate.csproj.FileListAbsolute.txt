@@ -1,0 +1,15 @@
+/workspaces/ConsoleTemplate/bin/Debug/net7.0/ConsoleTemplate
+/workspaces/ConsoleTemplate/bin/Debug/net7.0/ConsoleTemplate.deps.json
+/workspaces/ConsoleTemplate/bin/Debug/net7.0/ConsoleTemplate.runtimeconfig.json
+/workspaces/ConsoleTemplate/bin/Debug/net7.0/ConsoleTemplate.dll
+/workspaces/ConsoleTemplate/bin/Debug/net7.0/ConsoleTemplate.pdb
+/workspaces/ConsoleTemplate/obj/Debug/net7.0/ConsoleTemplate.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/ConsoleTemplate/obj/Debug/net7.0/ConsoleTemplate.AssemblyInfoInputs.cache
+/workspaces/ConsoleTemplate/obj/Debug/net7.0/ConsoleTemplate.AssemblyInfo.cs
+/workspaces/ConsoleTemplate/obj/Debug/net7.0/ConsoleTemplate.csproj.CoreCompileInputs.cache
+/workspaces/ConsoleTemplate/obj/Debug/net7.0/ConsoleTemplate.sourcelink.json
+/workspaces/ConsoleTemplate/obj/Debug/net7.0/ConsoleTemplate.dll
+/workspaces/ConsoleTemplate/obj/Debug/net7.0/refint/ConsoleTemplate.dll
+/workspaces/ConsoleTemplate/obj/Debug/net7.0/ConsoleTemplate.pdb
+/workspaces/ConsoleTemplate/obj/Debug/net7.0/ConsoleTemplate.genruntimeconfig.cache
+/workspaces/ConsoleTemplate/obj/Debug/net7.0/ref/ConsoleTemplate.dll
