@@ -1,3 +1,5 @@
+using System.Text.RegularExpressions;
+
 namespace Language
 {
 
@@ -67,9 +69,9 @@ namespace Language
             return fileContents[current++];
         }
 
-        public char GetNextChar() {
-            if (AtEnd()) return '\0';
-            return fileContents[current];
+        public char GetNextChar(int amount=0) {
+            if (current+amount >= fileContents.Length) return '\0';
+            return fileContents[current+amount];
         }
         public void ScanToken() {
             char chr = Advance();
@@ -119,24 +121,105 @@ namespace Language
                 // strings
                 case '"': StringLogic(line); break;
 
+                
                 default:
-                    Program.GetErrorHandler().Error(line, "", "Unknown Character: '" + chr + "'");
+
+                    // check for numbers, if so, then do number logic
+                    if (IsNumber(chr)) {
+                        // it is a number, so run NumberLogic();
+                        NumberLogic();
+                    } else if (IsAlphabet(chr.ToString())) {
+                        // do Identifier logic
+                        Identifier();
+                    } else {
+                        Program.GetErrorHandler().UnknownCharacterError(line, chr);
+                    }
+                    
                     break;
             }
+        }
+        
+        private void Identifier() {
+            while (IsAlphabet(GetNextChar().ToString()) || IsNumber(GetNextChar())) {
+                // while alphanumeric, advance
+                Advance();
+            }
+
+            Dictionary<string, TokenType> map = IdentifierMap();
+            string stringContents = fileContents[start..current];
+            TokenType outTokenType;
+            if (map.ContainsKey(stringContents))
+            {
+                map.TryGetValue(stringContents, out outTokenType);
+                Console.WriteLine(outTokenType);
+            } else {
+                outTokenType = TokenType.IDENTIFIER;
+            }
+            AddToken(outTokenType);
+
+        }
+
+        private static Dictionary<string, TokenType> IdentifierMap() {
+
+            Dictionary<string, TokenType> map = new Dictionary<string, TokenType>
+            {
+                { "and", TokenType.AND },
+                { "fun", TokenType.FUN },
+                { "for", TokenType.FOR },
+                { "if", TokenType.IF },
+                //{ "class", TokenType.CLASS }
+                { "null", TokenType.NULL },
+                { "or", TokenType.OR },
+                { "return", TokenType.RETURN },
+                { "else", TokenType.ELSE },
+                //{ "this", TokenType.THIS }
+                { "true", TokenType.TRUE },
+                { "false", TokenType.FALSE },
+                { "var", TokenType.VAR },
+                { "while", TokenType.WHILE },
+                { "Log", TokenType.LOG },
+            };
+            return map;
+        }
+        private static bool IsAlphabet(string value) {
+            // use regex string to check if value is alphabetical
+            // credit: https://stackoverflow.com/questions/1181419/verifying-that-a-string-contains-only-letters-in-c-sharp
+            return Regex.IsMatch(value, @"^[a-zA-Z]+$");
+        }
+        private static bool IsNumber(char chr) {
+            return double.TryParse(chr.ToString(), out _);
+        }
+        
+        private void NumberLogic() {
+
+            // while there are numbers, just advance
+            while (IsNumber(GetNextChar())) {
+                Advance();
+            }
+
+            // check if the next chr is a decimal and the one after is a number if so, advance.
+            if (GetNextChar() == '.' && IsNumber(GetNextChar(1))) {
+                Advance();
+
+                while (IsNumber(GetNextChar())) {
+                    Advance();
+                }
+            }
+
+            // add the number
+            AddToken(TokenType.NUMBER, fileContents[start..current]);
         }
 
         private void StringLogic(int startLine) {
             while (GetNextChar() != '"' && !AtEnd()) {
-                // while the next character is not quotation marks and not at the end, advance
-                // check if at the end of a line though, we still want that to update
-                if (GetNextChar() == '\n') {line++;}
+                // while the next character is not quotation marks and not at the end, advance            
                 Advance();
 
             }
 
             // if at the end, it means the string wasnt terminated. So error
             if (AtEnd()) {
-                Program.GetErrorHandler().Error(line, "", $"String not terminated. String started at line: {startLine}");
+                Program.GetErrorHandler().UnterminatedStringError(line, startLine);
                 // error, so return
                 return;
             }
@@ -144,6 +227,13 @@ namespace Language
             // at this point the string is closing, so advance so the tokeniser doesnt check the end quote and think it is the start of a new string
             Advance();
             string stringContents = fileContents[(start+1)..(current-1)]; // get the contents of the string NOT including quotations!
+            
+
+            // check for multi-line strings, which are bad.
+            
+            if (stringContents.Contains('\n')) {Program.GetErrorHandler().MultilineStringError(line); return;}
+
+
             AddToken(TokenType.STRING, stringContents);
 
         }
@@ -172,6 +262,6 @@ namespace Language
     }
     class Lexer 
     {
-        public Scanner scanner = new Scanner();
+        
     }
 }
