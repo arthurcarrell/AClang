@@ -1,0 +1,14 @@
+// this is a comment
+(( )){} // grouping stuff
+!*+-/=<> <= == // operators
+
+// this tests if strings work
+
+" hello how are you i am under the water"
+
+"
+
+
+
+
+
